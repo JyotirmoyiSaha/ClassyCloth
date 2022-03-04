@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Admin\ClothController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('admin.master');
 });
+
+Route::get('/add/cloth',[ClothController::class,'addCloth'])->name('add.cloth');
+Route::get('/cloth/list',[ClothController::class,'clothlist'])->name('cloth.list');
+Route::post('/cloth/create',[ClothController::class,'clothCreate'])->name('cloth.list.create');
