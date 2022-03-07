@@ -26,9 +26,4 @@ Route::put('/update/cloth/{cloth_id}',[ClothController::class,'updateCloth'])->n
 Route::get('/delete/cloth/{cloth_id}',[ClothController::class,'deleteCloth'])->name('cloth.delete');
 
 
-Route::get('/add/cloth/rype',[ClothController::class,'addClothType'])->name('add.cloth.type');
-Route::get('/cloth/type/list',[ClothController::class,'clothTypelist'])->name('cloth.type.list');
-Route::post('/cloth/type/create',[ClothController::class,'clothTypeCreate'])->name('cloth.type.list.create');
-Route::get('/delete/cloth/type/{clothtype_id}',[ClothController::class,'deleteClothType'])->name('cloth.type.delete');
-
 
