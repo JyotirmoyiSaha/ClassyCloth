@@ -2,6 +2,7 @@
 
 namespace App\Models;
 use App\Models\Cloth;
+use App\Models\ClothType;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
