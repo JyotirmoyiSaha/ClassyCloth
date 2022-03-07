@@ -20,3 +20,10 @@ Route::get('/', function () {
 Route::get('/add/cloth',[ClothController::class,'addCloth'])->name('add.cloth');
 Route::get('/cloth/list',[ClothController::class,'clothlist'])->name('cloth.list');
 Route::post('/cloth/create',[ClothController::class,'clothCreate'])->name('cloth.list.create');
+Route::get('/cloth/view/{cloth_id}',[ClothController::class,'viewCloth'])->name('cloth.view');
+Route::get('/edit/cloth/{cloth_id}',[ClothController::class,'editCloth'])->name('cloth.edit');
+Route::put('/update/cloth/{cloth_id}',[ClothController::class,'updateCloth'])->name('cloth.update');
+Route::get('/delete/cloth/{cloth_id}',[ClothController::class,'deleteCloth'])->name('cloth.delete');
+
+
+

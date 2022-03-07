@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('cloth_type');
             $table->string('cloth_color');
             $table->string('cloth_size');
-            $table->string('details');
+            $table->longText('details');
             $table->integer('cloth_price');
             $table->string('cloth_image');
             $table->timestamps();
