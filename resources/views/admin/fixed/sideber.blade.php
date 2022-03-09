@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav side-nav">
         <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="tables.html"><i class="fa-solid fa-people-carry-box"></i> Sellers</a></li>
+        <li><a href="{{route('seller.list')}}"><i class="fa-solid fa-people-carry-box"></i> Sellers</a></li>
         <li  class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa-solid fa-family-dress"></i>Categories<b class="caret"></b></a>
         <ul class="dropdown-menu">
