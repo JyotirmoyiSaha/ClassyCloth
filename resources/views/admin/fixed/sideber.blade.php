@@ -23,9 +23,11 @@
           <li><a href="#">Kids</a></li>
           <li><a href="#">Men</a></li>
           <li><a href="#">women</a></li>
-        </ul>  --}}
-      {{-- </li> --}}
-      <li><a href="tables.html"><i class="fa-solid fa-shirt"></i> Cloths</a></li>
+
+        </ul>
+      </li>
+      <li><a href="{{route('cloth.list')}}"><i class="fa-solid fa-shirt"></i> Cloths</a></li>
+
       <li><a href="typography.html"><i class="fa fa-font"></i> Orders</a></li>
       <li><a href="bootstrap-elements.html"><i class="fa-solid fa-magnifying-glass"></i>Order Details</a></li>
       <li><a href="bootstrap-grid.html"><i class="fa-solid fa-arrow-trend-up"></i> Stocks Information</a></li>
