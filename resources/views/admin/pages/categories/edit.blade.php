@@ -89,54 +89,58 @@ body {
 </head>
 <body>
 
-<div class="container">
-    <h2>Edit Category </h2>
-  <form action="{{route('category.update', $category->id)}}" method='POST' enctype="multipart/form-data">
-    @csrf
+ 
+  
+      <div class="container">
+        <h2>Edit Category </h2>
+      <form action="{{route('category.update', $category->id)}}" method='POST' enctype="multipart/form-data">
+        @csrf
+        
+        @if(session()->has ('success'))
+        <p class="alert alert-success">
+          {{session()->get ('success')}}
+        </p>
+        @endif
     
-    @if(session()->has ('success'))
-    <p class="alert alert-success">
-      {{session()->get ('success')}}
-    </p>
-    @endif
-
-    @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-  <div class="row">
-    <div class="col-25">
-      <label for="cloth_name">Category Name</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="cloth_name" name="name" placeholder="Category Name" value="{{$category->name}}">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25"> 
-      <label for="details">Details</label>
-    </div>
-    <div class="col-75">
-      <textarea id="details" name="details" placeholder="Category Details" value="{{$category->details}}"  style="height:200px"></textarea>
-    </div>
-  </div>
-  <div class="form-group">
-            <div class="form-group">
-                <label for="cloth_image">Image:</label>
-                <input  type="file" class="form-control" id="image">
-            </div>
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
         </div>
-  <br>
-  <div class="row">
-    <input type="submit" value="Submit">
-  </div>
-  </form>
-</div>
+    @endif
+      <div class="row">
+        <div class="col-25">
+          <label for="cloth_name">Category Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="cloth_name" name="name" placeholder="Category Name" value="{{$category->name}}">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25"> 
+          <label for="details">Details</label>
+        </div>
+        <div class="col-75">
+          <textarea id="details" name="details" placeholder="Category Details" value="{{$category->details}}"  style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+                <div class="form-group">
+                    <label for="cloth_image">Image:</label>
+                    <input  type="file" class="form-control" id="image">
+                </div>
+            </div>
+      <br>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+      </form>
+    </div>
+   
+
 
 </body>
 </html>
