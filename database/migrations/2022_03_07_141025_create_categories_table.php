@@ -13,16 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cloths', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('cloth_name');
-            $table->string('cloth_code');
-            $table->string('cloth_type');
-            $table->string('cloth_color');
-            $table->string('cloth_size');
-            $table->longText('details');
-            $table->integer('cloth_price');
-            $table->string('cloth_image');
+            $table->string('name');
+            $table->string('details');
+            $table->string('parent_id')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
@@ -34,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cloths');
+        Schema::dropIfExists('categories');
     }
 };

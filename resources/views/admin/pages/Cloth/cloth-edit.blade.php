@@ -43,7 +43,7 @@ input[type=submit]:hover {
 
 .col-25 {
   float: left;
-  width: 20%;
+  width: 25%;
   margin-top: 6px;
 }
 
@@ -85,17 +85,18 @@ body {
 </head>
 <body>
 
-<h2>Add Cloth </h2>
+<h2>Edit Cloth Details</h2>
 
 <div class="container">
-  <form action="{{route('cloth.list.create')}}" method='POST' enctype="multipart/form-data">
+  <form action="{{route('cloth.update',$cloth->id)}}" method='POST' enctype="multipart/form-data">
+  @method('PUT')
     @csrf
   <div class="row">
     <div class="col-25">
       <label for="cloth_name">Cloth Name</label>
     </div>
     <div class="col-75">
-      <input type="text" id="cloth_name" name="cloth_name" placeholder="Cloth Name">
+      <input type="text" id="cloth_name" value="{{$cloth->cloth_name}}" name="cloth_name" placeholder="Cloth Name">
     </div>
   </div>
   <div class="row">
@@ -103,7 +104,7 @@ body {
       <label for="cloth_code">Code</label>
     </div>
     <div class="col-75">
-      <input type="text" id="cloth_code" name="cloth_code" placeholder="Code">
+      <input type="text" id="cloth_code" value="{{$cloth->cloth_code}}" name="cloth_code" placeholder="Code">
     </div>
   </div>
   <div class="row">
@@ -111,7 +112,7 @@ body {
       <label for="cloth_type">Type</label>
     </div>
     <div class="col-75">
-    <input type="text" id="cloth_type" name="cloth_type" placeholder="Type">
+    <input type="text" id="cloth_type" value="{{$cloth->cloth_type}}" name="cloth_type" placeholder="Type">
       <!-- <select id="cloth_type" name="cloth_type">
         <option value="australia">Australia</option>
         <option value="canada">Canada</option>
@@ -124,7 +125,7 @@ body {
       <label for="cloth_color">Color</label>
     </div>
     <div class="col-75">
-      <input type="text" id="cloth_color" name="cloth_color" placeholder="Color">
+      <input type="text" id="cloth_color" value="{{$cloth->cloth_color}}" name="cloth_color" placeholder="Color">
     </div>
   </div>
   <div class="row">
@@ -132,7 +133,7 @@ body {
       <label for="cloth_size">Size</label>
     </div>
     <div class="col-75">
-       <select id="cloth_size" name="cloth_size">
+       <select id="cloth_size" value="{{$cloth->cloth_size}}" name="cloth_size">
         <option value="S">Small</option>
         <option value="M">Medium</option>
         <option value="L">Large</option>
@@ -146,7 +147,7 @@ body {
       <label for="cloth_price">Price</label>
     </div>
     <div class="col-75">
-      <input type="number" id="cloth_price" name="cloth_price" placeholder="Price">
+      <input type="number" id="cloth_price" value="{{$cloth->cloth_price}}" name="cloth_price" placeholder="Price">
     </div>
   </div>
   <div class="row">
@@ -154,17 +155,18 @@ body {
       <label for="details">Details</label>
     </div>
     <div class="col-75">
-      <textarea id="details" name="details" placeholder="Cloth Details" style="height:200px"></textarea>
+      <textarea id="details" value="{{$cloth->details}}" name="details" placeholder="Cloth Details" style="height:200px"></textarea>
     </div>
   </div>
   <div class="form-group">
             <div class="form-group">
                 <label for="cloth_image">Image:</label>
-                <input required type="file" class="form-control" id="cloth_image">
+                <input required type="file" value="{{$cloth->cloth_image}}" class="form-control" id="cloth_image">
             </div>
         </div>
   <br>
   <div class="row">
+
     <input type="submit" value="Submit">
   </div>
   </form>
