@@ -9,5 +9,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Seller extends Model
 {
     use HasFactory;
+    protected $guarded=[];
     use SoftDeletes;
 }
