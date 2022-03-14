@@ -107,7 +107,7 @@ body {
       height: 100%;
       border-radius: 0;
       border: none;
-      background-color: #222222;
+      background-color: rgb(7, 6, 80);
       overflow-y: auto;
     }
   
