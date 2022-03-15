@@ -40,7 +40,7 @@
 	  </div>
 	  
 	  <br>
-	  
+	  <a href="{{route('category.create')}}" class="btn btn-primary" type="button">Create New Category</a>
 	  <table id="customers">
 		<tr>
 		  <th>SL No</th>
@@ -70,7 +70,6 @@
 	
 	  </table>
 
-
-	  <a href="{{route('category.create')}}" class="btn btn-primary" type="button">Create New Category</a>
+{{ $categories->links() }}
     
 @endsection
