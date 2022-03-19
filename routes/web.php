@@ -5,6 +5,7 @@ use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ClothController;
 use App\Http\Controllers\Admin\SellerController;
+use App\Http\Controllers\Admin\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -61,6 +62,9 @@ Route::get('/edit/cloth/{cloth_id}',[ClothController::class,'editCloth'])->name(
 Route::put('/update/cloth/{cloth_id}',[ClothController::class,'updateCloth'])->name('cloth.update');
 Route::get('/delete/cloth/{cloth_id}',[ClothController::class,'deleteCloth'])->name('cloth.delete');
 
+
+//for order
+Route::get('/order',[OrderController::class,'vieworder'])->name('order.list');
 
 
 
