@@ -92,7 +92,7 @@ body {
     @csrf
   <div class="row">
     <div class="col-25">
-      <label for="cloth_name">Cloth Name</label>
+      <label for="cloth_name">Cloth Name:</label>
     </div>
     <div class="col-75">
       <input type="text" id="cloth_name" name="cloth_name" placeholder="Cloth Name">
@@ -100,7 +100,7 @@ body {
   </div>
   <div class="row">
     <div class="col-25">
-      <label for="cloth_code">Code</label>
+      <label for="cloth_code">Code:</label>
     </div>
     <div class="col-75">
       <input type="text" id="cloth_code" name="cloth_code" placeholder="Code">
@@ -108,7 +108,7 @@ body {
   </div>
   <div class="row">
     <div class="col-25">
-      <label for="cloth_type">Type</label>
+      <label for="cloth_type">Type:</label>
     </div>
     <div class="col-75">
     <input type="text" id="cloth_type" name="cloth_type" placeholder="Type">
@@ -121,7 +121,7 @@ body {
   </div>
   <div class="row">
     <div class="col-25">
-      <label for="cloth_color">Color</label>
+      <label for="cloth_color">Color:</label>
     </div>
     <div class="col-75">
       <input type="text" id="cloth_color" name="cloth_color" placeholder="Color">
@@ -129,7 +129,7 @@ body {
   </div>
   <div class="row">
     <div class="col-25">
-      <label for="cloth_size">Size</label>
+      <label for="cloth_size">Size:</label>
     </div>
     <div class="col-75">
        <select id="cloth_size" name="cloth_size">
@@ -160,7 +160,7 @@ body {
   <div class="form-group">
             <div class="form-group">
                 <label for="cloth_image">Image:</label>
-                <input required type="file" class="form-control" id="cloth_image">
+                <input required type="file" name="cloth_image" class="form-control" id="cloth_image">
             </div>
         </div>
   <br>

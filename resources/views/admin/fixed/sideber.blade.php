@@ -15,8 +15,9 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav side-nav">
         <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="{{route('user.list')}}"><i class="fa fa-dashboard"></i>Users</a></li>
         <li><a href="{{route('seller.list')}}"><i class="fa-solid fa-people-carry-box"></i> Sellers</a></li>
-        <li class="active"><a href="{{route('category.list')}}"><i class="fa-brands fa-buffer"></i> Category</a></li>
+        <li><a href="{{route('category.list')}}"><i class="fa-brands fa-buffer"></i> Category</a></li>
       </li>
       <li><a href="{{route('cloth.list')}}"><i class="fa-solid fa-shirt"></i> Cloths</a></li>
 

@@ -11,9 +11,9 @@
 	   border-collapse: collapse;
 	   width: 100%;
 	 }
-	 .heading h2{
+	 /* .heading h2{
 	   text-align: center;
-	 }
+	 } */
 	 #customers td, #customers th {
 	   border: 1px solid #ddd;
 	   padding: 8px;
@@ -34,7 +34,7 @@
 	 </style>
 
      <div class="heading">
-		<center><h2>Cloth Type</h2></center>
+	<h2>Cloth Type</h2>
 	  </div>
 	  
 	  <br>

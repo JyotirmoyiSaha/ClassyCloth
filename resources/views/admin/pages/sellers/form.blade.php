@@ -86,25 +86,25 @@ body {
 <body>
 <div class="container">
     <h2>Add Sellers </h2>
-  <form action="" method='POST' enctype="multipart/form-data">
+  <form action="{{route('seller.store')}}" method='POST' enctype="multipart/form-data">
     @csrf
     <div class="form-group">
         <div class="form-group">
             <label for="image">Image:</label>
-            <input required type="file" class="form-control" id="image">
+            <input required type="file" name="image" class="form-control" id="image">
         </div>
      </div>
   <div class="row">
     <div class="col-25">
-      <label for="cloth_name">Seller Name</label>
+      <label for="cloth_name">Seller Name:</label>
     </div>
     <div class="col-75">
-      <input type="text" id="seller_name" name="seller_name" placeholder=" Enter Seller Name">
+      <input type="text" id="seller_name" name="name" placeholder=" Enter Seller Name">
     </div>
   </div>
   <div class="row">
     <div class="col-25">
-      <label for="email">Email</label>
+      <label for="email">Email:</label>
     </div>
     <div class="col-75">
       <input type="text" id="email" name="email" placeholder="Enter Seller Email">
@@ -113,7 +113,7 @@ body {
 
   <div class="row">
     <div class="col-25">
-      <label for="address">Address</label>
+      <label for="address">Address:</label>
     </div>
     <div class="col-75">
       <input type="text" id="address" name="address" placeholder="Enter Seller Address">
@@ -122,7 +122,7 @@ body {
 
   <div class="row">
     <div class="col-25">
-      <label for="contact">Contact</label>
+      <label for="contact">Contact:</label>
     </div>
     <div class="col-75">
       <input type="text" id="contact" name="contact" placeholder="Enter Seller Contact">
