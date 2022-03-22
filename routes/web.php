@@ -30,6 +30,8 @@ Route::group(['prefix'=>'admin'],function(){
 
     Route::get('/login',[LoginController::class,'login'])->name('admin.login');
     Route::post('/do-login',[LoginController::class,'doLogin'])->name('admin.doLogin');
+    Route::get('auth/facebook', [LoginController::class, 'facebookRedirect'])->name('login.facebook');
+    Route::get('auth/facebook/callback', [LoginController::class, 'loginWithFacebook']);
     
     Route::group(['middleware'=>'auth'],function(){
 

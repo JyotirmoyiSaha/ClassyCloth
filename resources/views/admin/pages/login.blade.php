@@ -65,6 +65,7 @@ body{
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 </head>
 <body>
   
@@ -89,6 +90,11 @@ body{
       </div>
 
       <input type="submit" class="btn" value="Sign in">
+      <div class="container-login100-form-btn" style="padding:10px;">
+        <a href="{{route('login.facebook')}}" class="btn btn-primary">
+            <i class="fa-brands fa-facebook"></i>
+            </a>
+    </div>
     </div>
     </form>
   
