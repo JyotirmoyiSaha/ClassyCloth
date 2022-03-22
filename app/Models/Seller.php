@@ -10,4 +10,5 @@ class Seller extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $guarded=[];
 }

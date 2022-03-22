@@ -11,9 +11,9 @@
 	   border-collapse: collapse;
 	   width: 100%;
 	 }
-	 .heading h2{
+	 /* .heading h2{
 	   text-align: center;
-	 }
+	 } */
 	 #customers td, #customers th {
 	   border: 1px solid #ddd;
 	   padding: 8px;
@@ -51,13 +51,23 @@
 	  
 		</tr>
 	
-		  <td>abcd</td>
-		  <td>abcd</td>
-		  <td>abcd</td>
-		  <td>abcd</td>
-		  <td>abcd</td>
-		  <td>abcd</td>
-		  <td>abcd</td>
+		@foreach ($sellers as $key=>$seller)   
+     
+		<tr>
+		  <th scope="row">{{$key+1}}</th>
+		  <td>
+			<img src="{{url('/uploads/'.$seller->image)}}" width="100px" alt="Seller Image">
+		  </td>
+			<td>{{$seller->name}}</td>
+			<td>{{$seller->email}}</td>
+			<td>{{$seller->address}}</td>
+			<td>{{$seller->contact}}</td>
+			<td><a href=""><i class="fa-solid fa-pen-to-square"></i></a>
+				<a href=""><i class="fa-solid fa-trash"></i></a>
+			</td>
+			
+		  </tr>
+		  @endforeach
 	
 	  </table>
 
