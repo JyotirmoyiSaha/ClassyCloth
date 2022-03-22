@@ -1,5 +1,7 @@
 @extends('admin.master')
 @section('content')
+
+
 <style>
 	body{
 	 
@@ -34,45 +36,48 @@
 	 </style>
 
      <div class="heading">
+
 	<h2>Cloth Type</h2>
 	  </div>
 	  
 	  <br>
-	  <a class="btn btn-primary" href="{{route('add.cloth')}}" role="button">Add Cloth</a>
-	  <tbody></tbody>
+	  <a href="{{route('add.cloth')}}" class="btn btn-primary" type="button">Create New Cloth</a>
 	  <table id="customers">
 		<tr>
-		  <th>ID</th>
-		  <th>Image</th>
-		  <th>Name</th>
-		  <th>Code</th>
-		  <th>Type</th>
-		  <th>Color</th>
-		  <th>Size</th>
-		  <th>Price</th>
-		  <th>Action</th>
+		<th scope="row">SL No</th>
+		<th>Image</th>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Color</th>
+		<th>Size</th>
+		<th>Action</th>
 	  
 		</tr>
-	<tr>
-		@foreach($clothlists as $key=>$cloth)
-							<td>{{$key+1}}</td>
-			<td> 
+		
+
+@foreach($clothlists as $key=>$cloth)  
+     
+		<tr>
+		  <th scope="row">{{$key+1}}</th>
+		  <td> 
             <img src="{{url('/uploads/'.$cloth->cloth_image)}}" width="100px" alt="Cloth Image">
             </td>
 			<td>{{$cloth->cloth_name}}</td>
-            <td>{{$cloth->cloth_code}}</td>
             <td>{{$cloth->cloth_type}}</td>
 			<td>{{$cloth->cloth_color}}</td>
 			<td>{{$cloth->cloth_size}}</td>
-			<td>{{$cloth->cloth_price}}</td>
 			<td>
-			<a class="btn btn-primary" href="{{route('cloth.view',$cloth->id)}}"><i class="fas fa-eye"></i></a>
-            <a class="btn btn-warning" href="{{route('cloth.edit',$cloth->id)}}"><i class="fas fa-edit"></i></a>
-            <a class="btn btn-danger" href="{{route('cloth.delete',$cloth->id)}}"><i class="fas fa-trash-alt"></i></a>
+			<a href="{{route('cloth.view',$cloth->id)}}"><i class="fa-solid fa-eye"></i></a>
+            <a href="{{route('cloth.edit',$cloth->id)}}"><i class="fa-solid fa-pen-to-square"></i></a>
+            <a href="{{route('cloth.delete',$cloth->id)}}"><i class="fa-solid fa-trash"></i></a>
 			</td>
-			@endforeach
-			</tr>
-			</tbody>
+			
+		  </tr>
+		  @endforeach
+	
 	  </table>
+
+{{ $clothlists->links() }}
+    
 @endsection
 

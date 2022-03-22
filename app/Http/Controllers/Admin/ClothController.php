@@ -10,7 +10,7 @@ class ClothController extends Controller
 {
     public function clothlist()
     {
-        $clothlists=Cloth::all();
+        $clothlists=Cloth::paginate(5);
         return view('admin.pages.Cloth.cloth-list',compact('clothlists'));
     }
     public function addCloth()
