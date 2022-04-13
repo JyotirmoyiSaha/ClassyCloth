@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Routing\Route as RoutingRoute;
+use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\ClothController;
 use App\Http\Controllers\Admin\LoginController;
@@ -37,7 +38,13 @@ Route::group(['prefix'=>'admin'],function(){
 
         Route::view('/dashboard', 'admin.master')->name('admin');
         
-
+        //Role
+     
+        Route::get('role/list', [RoleController::class,'index'])->name('role.list');
+        Route::get('role/create', [RoleController::class,'create'])->name('role.create');
+        Route::post('role/store', [RoleController::class,'store'])->name('role.store');
+        Route::get('edit/role/{role_id}', [RoleController::class,'edit'])->name('edit.role');
+        Route::post('update/role/{role_id}', [RoleController::class,'update'])->name('update.role');        
 
         // categories
         Route::get('/category_list',[CategoriesController::class, 'list'])->name('category.list');
