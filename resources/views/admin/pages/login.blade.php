@@ -88,6 +88,8 @@ body{
         <i class="fas fa-lock"></i>
         <input name="password" type="password" placeholder="Password">
       </div>
+      <a href="{{route('admin.forget.password')}}">Reset your password</a>
+      <br>
 
       <input type="submit" class="btn" value="Sign in">
       <div class="container-login100-form-btn" style="padding:10px;">

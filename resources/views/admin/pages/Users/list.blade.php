@@ -41,8 +41,8 @@
 	  <table id="customers">
 		<tr>
 		  <th>ID</th>
-		  <th>Image</th>
 		  <th>Name</th>
+		  <th>Image</th>
 		  <th>Email</th>
 		  <th>Action</th>
 	  
@@ -53,13 +53,11 @@
 			<tr>
 			  <th scope="row">{{$key+1}}</th>
 				<td>{{$user->name}}</td>
-				<td>{{$user->details}}</td>
-				<td>{{$category->parent_id}}</td>
-				<td>{{$category->image}}</td>
-				<td>#</td>
-				<td><a href="{{route('category.edit',$category->id)}}"><i class="fa-solid fa-pen-to-square"></i></a>
+				<td>{{$user->image}}</td>
+				<td>{{$user->email}}</td>
+				{{-- <td><a href="{{route('category.edit',$category->id)}}"><i class="fa-solid fa-pen-to-square"></i></a>
 					<a href="{{route('category.delete',$category->id)}}"><i class="fa-solid fa-trash"></i></a>
-				</td>
+				</td> --}}
 				
 			  </tr>
 			  @endforeach

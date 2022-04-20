@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\SellerController;
 use App\Http\Controllers\admin\CategoriesController;
+use App\Http\Controllers\Admin\Reset\ResetController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +38,9 @@ Route::group(['prefix'=>'admin'],function(){
     Route::group(['middleware'=>'auth'],function(){
 
         Route::view('/dashboard', 'admin.master')->name('admin');
+
+        //Reset-Password
+        Route::get('/admin/forget-password',[ResetController::class, 'forgetPassword'])->name('admin.forget.password');
         
         //Role
      
