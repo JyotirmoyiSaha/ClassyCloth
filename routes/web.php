@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\SellerController;
 use App\Http\Controllers\admin\CategoriesController;
 use App\Http\Controllers\Admin\Reset\ResetController;
+// use App\Http\Controllers\Website\MembershipController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,9 +37,16 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('auth/facebook/callback', [LoginController::class, 'loginWithFacebook']);
     
     Route::group(['middleware'=>'auth'],function(){
-
         Route::view('/dashboard', 'admin.master')->name('admin');
 
+        //Membership
+        // Route::get('/membership',[MembershipController::class,'membership'])->name('membership');
+        // Route::get('/get-membership/{type}', [MembershipController::class, 'membershipGet'])->name('get.membership');
+
+        // Route::group( ['middleware' => 'membership'], function () {
+
+        // 
+        // });
         //Reset-Password
         Route::get('/admin/forget-password',[ResetController::class, 'forgetPassword'])->name('admin.forget.password');
         

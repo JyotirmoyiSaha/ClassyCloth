@@ -8,24 +8,24 @@
 
     <title>Dashboard - SB Admin</title> --}}
 
-    <!-- Bootstrap core CSS -->
+<!-- Bootstrap core CSS -->
 {{-- <link href="{{url('/admin/css/bootstrap.css')}}" rel="stylesheet"> --}}
 
-    <!-- Add custom CSS here -->
-    {{-- <link href="{{url('/admin/css/sb-admin.css')}}" rel="stylesheet">
+<!-- Add custom CSS here -->
+{{-- <link href="{{url('/admin/css/sb-admin.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> --}}
-    <!-- Page Specific CSS -->
-    {{-- <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+<!-- Page Specific CSS -->
+{{-- <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
   </head>
 
   <body>
 
     <div id="wrapper"> --}}
 
-      <!-- Sidebar -->
-      {{-- <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"> --}}
-        <!-- Brand and toggle get grouped for better mobile display -->
-        {{-- <div class="navbar-header">
+<!-- Sidebar -->
+{{-- <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"> --}}
+<!-- Brand and toggle get grouped for better mobile display -->
+{{-- <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -35,8 +35,8 @@
           <a class="navbar-brand" href="index.html">SB Admin</a>
         </div> --}}
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        {{-- <div class="collapse navbar-collapse navbar-ex1-collapse">
+<!-- Collect the nav links, forms, and other content for toggling -->
+{{-- <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
             <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
             <li><a href="charts.html"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
@@ -116,10 +116,10 @@
               </ul>
             </li>
           </ul> --}}
-        {{-- </div><!-- /.navbar-collapse --> --}}
-      {{-- </nav> --}}
+{{-- </div><!-- /.navbar-collapse --> --}}
+{{-- </nav> --}}
 
-      {{-- <div id="page-wrapper">
+{{-- <div id="page-wrapper">
 
         <div class="row">
           <div class="col-lg-12">
@@ -392,18 +392,18 @@
               </div>
             </div>
           </div> --}}
-        {{-- </div><!-- /.row -->
+{{-- </div><!-- /.row -->
 
       </div><!-- /#page-wrapper -->
 
     </div><!-- /#wrapper --> --}}
 
-    <!-- JavaScript -->
-    {{-- <script src="{{url('/admin/js/jquery-1.10.2.js')}}"></script>
+<!-- JavaScript -->
+{{-- <script src="{{url('/admin/js/jquery-1.10.2.js')}}"></script>
     <script src="{{url('/admin/js/bootstrap.js')}}"></script> --}}
 
-    <!-- Page Specific Plugins -->
-    {{-- <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<!-- Page Specific Plugins -->
+{{-- <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
     <script src="{{url('/admin/js/chart-data-morris.js')}}"></script>
     <script src="{{url('/admin/js/jquery.tablesorter.js')}}"></script>

@@ -23,18 +23,18 @@ class UserController extends Controller
             $file=$request->file('Imagefile');
             $userimage=date('Ymdhms').'.'.$file->getClientOriginalExtension();
             $file->storeAs('/uploads',$userimage);
-           // dd($userimage);
+        //    dd($userimage);
         }
         User::create([
             'image'=>$userimage,
-            'role_id'=>$request->role,
+            // 'role_id'=>$request->role,
             'name'=>$request->username,
             'email'=>$request->email,
             'password'=>bcrypt($request->password),
             
 
         ]);
-        return redirect()->back();
+        return redirect()->route('user.list');
 
     }
 

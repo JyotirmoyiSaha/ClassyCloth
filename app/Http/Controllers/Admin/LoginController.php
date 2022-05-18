@@ -45,7 +45,7 @@ class LoginController extends Controller
 
 
     public function login(){
-        return view('admin.pages.login');
+        return view('admin.pages.Login.login');
     }
     public function doLogin(Request $request)
     {
